@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #333333;
+}
+
+.container {
+    padding: 100px 200px;
+    background-color: #fff;
+    position: relative;
+}
+
+.circle {
+    background-color: #ff7979;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    top: -200px;
+    left: -200px;
+}
+
+.icon-cross {
+    position: absolute;
+    top: 300px
+}
+
+.icon-menu {
+    position: absolute;
+    top: 300px;
+
+}
+
+.container p {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.container span {
+    display: block;
+    font-size: 24px;
+    font-style: italic;
+    color: dimgrey;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0 0 10px;
+    font-size: 42px;
+}
+
+.subtitle {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.container img {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-menu li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-home:before {
+    content: '';
+    padding-right: 20px;
+    background-image: url("./icons/home.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-about:before {
+    content: '';
+    padding-right: 20px;
+    background-image: url("./icons/info.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-contacts:before {
+    content: '';
+    padding-right: 20px;
+    background-image: url("./icons/contact.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
