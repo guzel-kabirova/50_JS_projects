@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --color-bg: #0d0d25;
+    --color-card: #0e3467;
+    --color-font: #4ff5f3;
+    --color-white: rgba(79, 245, 243, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quantico', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    background-image: linear-gradient(var(--color-white) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-white) 1px, transparent 1px);
+    background-size: 60px 60px, 60px 60px;
+    background-repeat: repeat;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--color-card);
+    padding: 50px 60px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 100%;
+    width: 1000px;
+}
+
+.card h1 {
+    font-size: 28px;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.joke {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-font);
+}
+
+.btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 28px;
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    padding: 20px 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: rgba(79, 245, 243, 0.5);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
+}
