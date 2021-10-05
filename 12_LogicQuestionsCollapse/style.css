@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #F9F9F9;
+}
+
+.questions {
+    margin: 30px auto;
+    width: 800px;
+}
+
+.questions h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.card {
+    border: 2px solid #ECECEC;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    position: relative;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.card h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 34px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+
+.card.active {
+    background-color: white;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);;
+}
+
+.card.active::before, .card.active::after {
+    content: '';
+    position: absolute;
+    background-image: url('icons/message.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+    opacity: 0.4;
+    top: 30px;
+    left: 30px;
+    filter: invert(80%) sepia(32%) saturate(224%) hue-rotate(166deg) brightness(103%) contrast(92%);
+}
+
+.card.active::after {
+    top: -10px;
+    left: -40px;
+    filter: invert(75%) sepia(6%) saturate(1172%) hue-rotate(304deg) brightness(114%) contrast(96%);
+    transform: rotateY(180deg);
+}
+
+.card.active h2 {
+    margin: 0 34px 40px 0;
+}
+.card.active p {
+    display: block;
+}
+
+.card button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card button:focus {
+    outline: 0;
+}
+
+.card.active .open, .card .close {
+    display: none;
+}
+
+.card.active .close {
+    display: block;
+    background-color: #767676;
+}
+.card.active .close img {
+    filter: invert(100%);
+}
