@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+
+:root {
+    --color-main: #1f1b2e;
+    --color-main-light: #312b45;
+    --color-placeholder: #7e798f;
+    --color-white: #fff;
+    --color-good: #5DAD1B;
+    --color-middle: #FCC307;
+    --color-bad: #FF4F1E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    background-color: var(--color-main);
+    color: var(--color-white);
+}
+
+.header {
+    background-color: var(--color-main-light);
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.search {
+    background-color: var(--color-main-light);
+    border: 2px solid var(--color-main);
+    border-radius: 20px;
+    height: 30px;
+    width: 220px;
+    color: var(--color-white);
+    padding: 20px;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.search::placeholder {
+    color: var(--color-placeholder);
+}
+
+.search:focus, .search:active {
+    outline: none;
+    background-color: var(--color-main);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 80px;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.film-card {
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--color-main-light);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.film-img-container {
+    height: 400px;
+}
+
+.film-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.film-main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.film-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.film-rating {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: var(--color-main);
+    border-radius: 10px;
+}
+
+.film-rating.green {
+    color: var(--color-good);
+}
+
+.film-rating.orange {
+    color: var(--color-middle);
+}
+
+.film-rating.red {
+    color: var(--color-bad);
+}
+
+.film-description {
+    background-color: var(--color-white);
+    color: var(--color-main);
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.film-card:hover .film-description {
+    transform: translateY(0);
+}
+
+.film-description h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.film-description p {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+
