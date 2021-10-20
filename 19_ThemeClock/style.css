@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+:root {
+    --primary-color: #000;
+    --secondary-color:#fff;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color:#000;
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    background-color: var(--secondary-color);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Jost', Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: inherit;
+    letter-spacing: 4px;
+}
+
+.clock-container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.clock {
+    margin-top: 220px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.time {
+    font-size: 60px;
+    color: var(--primary-color);
+}
+
+.date {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: darkgrey;
+}
+
+.day {
+    display: inline-flex;
+    background-color: var(--primary-color);
+    height: 28px;
+    width: 28px;
+    line-height: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in;
+}
+
+.needle {
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 4px;
+    background-color: var(--primary-color);
+    transform-origin: bottom center;
+}
+
+.hour {
+    height: 70px;
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.minute {
+    height: 140px;
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.second {
+    height: 140px;
+    background-color: orangered;
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.center {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: orangered;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center:after {
+    content: '';
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
